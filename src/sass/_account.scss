@@ -87,6 +87,16 @@
     }
   }
 
+  .MuiInputBase-inputMultiline{
+    @include desktop{
+      padding-top: 50px;
+    }
+  }
+
+  .MuiSelect-selectMenu{
+    line-height: 40px;
+  }
+
   &__buttonWrap{
     margin: 30px 0 50px;
   }

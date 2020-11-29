@@ -107,7 +107,7 @@ h1{
 
   @include desktop{
     padding: 25px 44px;
-    margin-bottom: 46px;
+    margin-bottom: 23px;
     width: 100%;
     height: 80px;
   }
@@ -132,23 +132,13 @@ h1{
   }
 }
 
-// drop down
-// .MuiPopover-paper{
-//   box-shadow: none !important;
-// }
+.MuiSvgIcon-root{
+  color: $primaryVariant1 !important;
+}
 
-// .MuiList-root{
-//   li{
-//     &:first-child{
-//       border-radius: 20px 20px 0 0;
-//     }
-//   }
-// }
-
-// .MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover{
-//   background-color: $primary !important;
-//   color: #ffffff;
-// }
+.MuiListItem-root.MuiListItem-button{
+  padding-left: 25px !important;
+}
 
 a, 
 button{

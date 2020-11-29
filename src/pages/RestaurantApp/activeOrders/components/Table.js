@@ -18,6 +18,8 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
 import TextField  from "@material-ui/core/TextField"
 import MenuItem from '@material-ui/core/MenuItem'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Select from '@material-ui/core/Select';
 
 // Images
 import CustomerIcon from "../../../../assets/img/icons/account.svg"
@@ -104,18 +106,18 @@ function Row(props) {
 
         {/* Status */}
         <TableCell className="ordersTable__statusDropdown">
-          <TextField
-          select
-          variant="outlined"
-          defaultValue={row.status}
-          onChange={e => onStatusChange(row.orderID, e.target.value)}
-          style={{width: '300px'}}
+          <Select
+            variant="outlined"
+            defaultValue={row.status}
+            onChange={e => onStatusChange(row.orderID, e.target.value)}
+            style={{width: '300px', borderRadius: '20px'}}
+            IconComponent = {ExpandMoreIcon}
           >
             <MenuItem key='0' value='1'>Waiting to be confirmed</MenuItem>
             <MenuItem key='1' value='2'>Being Prepared</MenuItem>
             <MenuItem key='2' value='3'>Being Delivered</MenuItem>
             <MenuItem key='3' value='4'>Delivered</MenuItem>
-          </TextField>
+          </Select>
         </TableCell>
       </TableRow>
       <TableRow>

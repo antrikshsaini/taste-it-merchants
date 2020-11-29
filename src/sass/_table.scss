@@ -233,7 +233,7 @@
 
     @include desktop{
       font-size: 17.5px !important;
-      padding: 26.25px 33.25px !important;
+      // padding: 26.25px 33.25px !important;
     }
   }
 }
@@ -265,25 +265,34 @@
 }
 
 .table{
+  
   &__orderNoHeader{
+    color: $primaryVariant1 !important;
+
     @include desktop{
       width: 189px !important;
     }
   }
 
   &__productHeader{
+    color: $primaryVariant1 !important;
+
     @include desktop{
       width: 502px !important;
     }
   }
 
   &__quantityHeader{
+    color: $primaryVariant1 !important;
+
     @include desktop{
       width: 158px !important;
     }
   }
 
   &__statusHeader{
+    color: $primaryVariant1 !important;
+
     @include desktop{
       width: 241px;
     }

@@ -7,6 +7,7 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
+import StopRoundedIcon from '@material-ui/icons/StopRounded';
 
 
 const TabPanel = (props) => {
@@ -41,7 +42,7 @@ const TabPanel = (props) => {
                       index={index}
                       label={choiceDescription}
                       value={choiceDescription}
-                      control={<Checkbox color="primary" />}
+                      control={<Checkbox color="primary" icon={<StopRoundedIcon />} />}
                       labelPlacement="start"
                       onChange={e => handleChange(e.target.value)}
                       checked={checked}
