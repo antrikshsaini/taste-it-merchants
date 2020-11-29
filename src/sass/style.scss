@@ -140,6 +140,23 @@ h1{
   padding-left: 25px !important;
 }
 
+.MuiPopover-paper{
+  border-radius: 20px !important;
+
+  ul{
+    padding: 0 !important;
+
+    .Mui-selected{
+      background-color: $primary;
+      color: white;
+
+      svg{
+        color: white;
+      }
+    }
+  }
+}
+
 a, 
 button{
   cursor: pointer;

@@ -17,6 +17,7 @@ const ordersGrouper = (props) =>{
   ordersGroupedByDate.length = 0
   props.orders.map((element) => {
     let formattedDate = moment(element.createdAt).format('MMM Do, YYYY')
+    console.log(element.createdAt)
 
     if(formattedDate === today){
       formattedDate = "Today"
