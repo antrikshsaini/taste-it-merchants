@@ -2,70 +2,66 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import { useForm, Form } from "../useForm";
 import Controls from "../../../components/controls/Controls";
-import axios from 'axios';
+import axios from "axios";
 import { useHistory } from "react-router-dom";
-import {BASE_URL} from "../../../config/config"
+import { BASE_URL } from "../../../config/config";
 
 const initialValues = {
-  
-  email: '',
-  password: '',
+  email: "",
+  password: "",
 };
 
-
 export default function SignInForm() {
-
   const history = useHistory();
 
-  // const validate = (fieldValues = values) => {
-  //   let temp = { ...errors };
-  //   if ("password" in fieldValues)
-  //     temp.address = fieldValues.password ? "" : "This Field is Required";
-  //   if ("email" in fieldValues)
-  //     temp.email = /$^|.+@.+..+/.test(fieldValues.email)
-  //       ? ""
-  //       : "Email is not valid.";
+  const validate = (fieldValues = values) => {
+    let temp = { ...errors };
+    if ("password" in fieldValues) {
+      temp.password =
+        fieldValues.password.length > 7 ? "" : "Minimum 8 Characters Required";
+    }
 
-  //   setErrors({
-  //     ...temp,
-  //   });
+    if ("email" in fieldValues) {
+      temp.email = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(
+        fieldValues.email
+      )
+        ? ""
+        : "Email is not valid.";
+    }
 
-  //   if (fieldValues === values)
-  //     return Object.values(temp).every((x) => x === "");
-  // };
+    setErrors({
+      ...temp,
+    });
 
-  const {
-    values,
-    // errors,
-    // setErrors,
-    handleInputChange,
-    resetForm,
-  } = useForm(initialValues
-    // , true, validate
-    );
+    if (fieldValues === values)
+      return Object.values(temp).every((x) => x === "");
+  };
+
+  const { values, errors, setErrors, handleInputChange, resetForm } = useForm(
+    initialValues,
+    true,
+    validate
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (validate()) {
-      // provinceService.insertEmployee(values)
+    if (validate()) {
+      axios
+        .post(`${BASE_URL}/restaurants/login`, {
+          email: values.email,
+          password: values.password,
+        })
+        .then((res) => {
+          localStorage.setItem("jwt-token", res.data.token);
+          history.push("/restaurant");
+        })
+        .catch((err) => {
+          localStorage.removeItem("jwt-token");
+          this.props.history.push("/signIn");
+        });
 
-      axios.post(`${BASE_URL}/restaurants/login`, {
-        email: values.email,
-        password: values.password
-      }).then(res => {
-        // console.log(res.data.token);
-        localStorage.setItem('jwt-token', res.data.token);
-        // console.log(props);
-
-        history.push('/restaurant');
-      })
-      .catch((err) => {
-        // localStorage.removeItem("jwt-token");
-        // this.props.history.push("/signIn");
-      });
-      
       resetForm();
-    // }
+    }
   };
   return (
     <Form onSubmit={handleSubmit}>
@@ -80,14 +76,14 @@ export default function SignInForm() {
               required: true,
             }}
             className="input"
-            // error={errors.email}
+            error={errors.email}
           />
           <Controls.TextFieldControl
             label="Password"
             name="password"
             value={values.password}
             onChange={handleInputChange}
-            // error={errors.password}
+            error={errors.password}
             type="password"
             InputLabelProps={{
               required: true,
