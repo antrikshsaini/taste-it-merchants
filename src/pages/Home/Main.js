@@ -204,7 +204,7 @@ class Main extends Component {
                 role: "Full Stack Developer",
                 imgUrl: require('../../assets/img/teamImg/Antrix.jpg'),
                 imgWebPUrl: require('../../assets/img/teamImg/Antrix.jpg.webp'),
-                linkedIn:"linkedin.com/in/antriksh-saini-3286b3106/",
+                linkedIn:"https://www.linkedin.com/in/antriksh-saini/",
                 github:"https://github.com/antrikshsaini"
               }}
             />

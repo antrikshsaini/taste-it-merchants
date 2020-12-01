@@ -25,17 +25,18 @@ class Footer extends Component {
 
                 <h3>Design Assets</h3>
 
-              <li>Marketing Materials</li>
+              <li><a href="https://drive.google.com/file/d/1yceSuEx_1c0OaPuNDdOCbkWVwmgJzl96/view"　target="_blank">Marketing Materials</a></li>
               <li>Promotional Videos</li>
-              <li>Project Proposal</li>
+              <li><a href="https://drive.google.com/file/d/1couz50H6GlM9GlTLKE4Zx032h2m0bowI/view"　target="_blank">Project Proposal</a></li>
             </ul>
 
             <ul className="content4-list">
 
                 <h3>Development Assets</h3>
 
-              <li>Tech Stacks</li>
-              <li>GitHub Repository</li>
+              <li><a href="https://drive.google.com/file/d/1yYfzrGLuL1vLHddLz_kNvPOrJnSYjPlY/view"　target="_blank">Tech Stacks</a></li>
+              <li><a href="https://github.com/antrikshsaini/taste-it-merchants"　target="_blank">GitHub (Restaurant)</a></li>
+              <li><a href="https://github.com/mert-oktem/taste-it-customer"　target="_blank">GitHub (Customer)</a></li>
             </ul>
           </div>
         </div>
