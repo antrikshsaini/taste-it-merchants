@@ -75,11 +75,17 @@
     img{
       position: absolute;
       top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 300px;
 
       @include desktop{
         top: -20px;
         right: -20px;
+        left: auto;
+        transform: none;
         width: 479px;
+        max-width: none;
         
         grid-column: 2/3;
         grid-row: 1/1;

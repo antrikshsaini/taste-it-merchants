@@ -127,7 +127,7 @@
         margin-top: 50px;
 
         @include desktop {
-          margin: 0;
+          margin-top: 60px;
         }
       }
     }
@@ -208,9 +208,9 @@
       .section2-content1{
         max-width: 418.25px;
 
-        img{
+        picture{
           margin: 50px auto;
-          max-width: 100%;
+          max-width: 418px;
 
           @include desktop {
             margin: 0;
@@ -291,7 +291,7 @@
 
         @include desktop {
           margin: 0;
-          max-width: 390px;
+          max-width: 350px;
         }
       }
     }
@@ -339,7 +339,7 @@
       @include tablet {
         display: grid;
         grid-gap: 30px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
       }
 
       @include desktop {
@@ -356,7 +356,6 @@
     
     @include desktop {
       background-color: $secondaryVariant;
-
     }
 
     .home-section4{
@@ -364,31 +363,33 @@
       padding: 79.6px 20px 105px;
       max-width: $maxWidth;
   
-      @include desktop {
+      @include tablet {
         display: flex;
       }
   
-      img{
+      picture{
         margin: 50px auto;
         max-width: 100%;
 
-        @include desktop {
+        @include tablet{
           max-width: 554px;
           margin: 0 110px 0 0;
+          // justify-content: space-between;
         }
       }
   
       .section4-content2{
-        @include desktop {
+        @include tablet {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          min-width: 364px;
         }
 
         // "Ready to see what we are working on?"
         h1{
           font-size: 31px;
-          @include desktop {
+          @include tablet {
             font-size: 52.5px;
             margin-bottom: 0;
           }
@@ -402,7 +403,7 @@
         // Dowanload button
         button{
 
-          @include desktop {
+          @include tablet {
             width: 294px;
 
           }

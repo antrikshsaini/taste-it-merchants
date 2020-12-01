@@ -258,7 +258,8 @@ class Main extends Component {
                 role: "UI/UX Designer",
                 imgUrl: require('../../assets/img/teamImg/Manpreet.jpg'),
                 imgWebPUrl: require('../../assets/img/teamImg/Manpreet.jpg.webp'),
-                linkedIn:"linkedin.com/in/manpreet-kaur-b42a21136/",
+                linkedIn:"linkedin.com/in/manpreet-kaur7",
+                behance:"https://www.behance.net/manpreetkaur24"
               }}
             />
 

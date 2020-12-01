@@ -2,7 +2,7 @@
 #restaurantApp_wrap{
   flex-direction: column;
 
-  @include desktop{
+  @media screen and (min-width: 1680px) {
     flex-direction: row;
   }
 }
@@ -57,11 +57,11 @@
       }
 
       .toolbar__icon-account{
-        padding: 5px;
+        padding: 3px;
       }
 
       .toolbar__icon-support{
-        padding: 4px;
+        padding: 0;
       }
     }
 

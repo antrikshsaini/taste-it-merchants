@@ -4,13 +4,19 @@
 //        }
 
 @mixin tablet{
-  @media (min-width: 700px) {
+  @media (min-width: 806px) {
+    @content;
+  }
+}
+
+@mixin tableBp{
+  @media (min-width: 1200px) {
     @content;
   }
 }
 
 @mixin desktop{
-  @media (min-width: 1024px){
+  @media (min-width: 1150px){
     @content;
   }
 }

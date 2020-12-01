@@ -55,6 +55,10 @@
 
     &-buttonWrap{
       margin: 46px 0;
+
+      @include desktop{
+        margin-bottom: 0;
+      }
     }
 
     &-addButton{
@@ -85,6 +89,7 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
+      margin-bottom: 50px;
     }
   }
 
@@ -123,6 +128,7 @@
 
     @include desktop{
       height: 100% !important;
+      margin-bottom: 0 !important;
       flex-grow: 3;
     }
 

@@ -92,7 +92,7 @@
     padding: 20px 20px 80px;
 
     @include desktop{
-      padding: 20px 54.8px 144px;
+      padding: 20px 54.8px 80px;
       margin: 35px 56px ;
     }
 
@@ -113,7 +113,7 @@
 
       .MuiTextField-root{
         @include desktop{
-          margin-bottom: 42px !important;
+          margin-bottom: 21px !important;
         }
       }
     }

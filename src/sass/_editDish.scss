@@ -41,6 +41,10 @@
 
     &-buttonWrap{
       margin: 46px 0;
+
+      @include desktop{
+        margin-bottom: 0;
+      }
     }
 
     &-addButton{
@@ -71,6 +75,7 @@
     @include desktop{
       display: flex;
       width: 100%;
+      margin-bottom: 50px;
     }
   }
 
@@ -108,6 +113,7 @@
     @include desktop{
       height: 100% !important;
       flex-grow: 3;
+      margin-bottom: 0 !important;
     }
 
     .MuiOutlinedInput-multiline{
