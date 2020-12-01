@@ -27,7 +27,7 @@
   display: none !important;
   color: $primaryVariant1 !important;
 
-  @include desktop{
+  @include tableBp{
     display: table-header-group !important;
   }
 }
@@ -43,12 +43,12 @@
     border-bottom: unset !important;
     width: 100%;
 
-    @include desktop{
+    @include tableBp{
       width: auto;
     }
   }
 
-  @include desktop{
+  @include tableBp{
     display: table-row !important;
   }
 
@@ -56,7 +56,7 @@
     padding-left: 0;
     padding-right: 0;
 
-    @include desktop{
+    @include tableBp{
       padding-left: 16px;
       padding-right: 16px;
     }
@@ -68,7 +68,7 @@
   padding: 16px 0 !important;
   
 
-  @include desktop{
+  @include tableBp{
     padding-bottom: 0 !important;
     padding-top: 0 !important;
     padding-left: 17% !important;
@@ -82,7 +82,7 @@
   &-cell{
     font-size: 18px;
 
-    @include desktop{
+    @include tableBp{
       font-size: 21px !important;
     }
   }
@@ -91,7 +91,7 @@
   .MuiTable-root{
     padding: 15px 0;
 
-    @include desktop{
+    @include tableBp{
       padding: 35px 0;
     }
   }
@@ -99,7 +99,7 @@
   &-tableHeader{
     padding-right: 25px !important;
 
-    @include desktop{
+    @include tableBp{
       padding-right: 100px !important;
     }
   }
@@ -109,7 +109,7 @@
     padding: 6px 0 !important;
     height: 32px;
 
-    @include desktop{
+    @include tableBp{
       display: flex !important;
       align-items: center;
       padding: 6px 125px 6px 0px !important;
@@ -126,7 +126,7 @@
     span{
       display: none !important;
 
-      @include desktop{
+      @include tableBp{
         display: inline !important;
       }
     }
@@ -141,7 +141,7 @@
   padding: 16px 0 !important;
   width: 100%;
 
-  @include desktop{
+  @include tableBp{
     width: 85px;
     justify-content: flex-start;
     margin: 25px 0;
@@ -157,14 +157,14 @@
   font-family: 'NexaXBold' !important;
   font-size: 16px !important;
 
-  @include desktop{
+  @include tableBp{
     font-family: 'NexaLight' !important;
     font-size: 21px !important;
     margin-right: 24px;
   }
 
   div{
-    @include desktop{
+    @include tableBp{
       width: 42.563px !important;
     }
   }
@@ -184,7 +184,7 @@
     width: 72px !important;
     margin-right: 33px;
 
-    @include desktop{
+    @include tableBp{
       width: 72px !important;
       margin-right: 33px;
     }
@@ -195,7 +195,7 @@
     font-family: 'NexaXBold' !important;
     font-size: 16px !important;
   
-    @include desktop{
+    @include tableBp{
       font-size: 21px !important;
     }
   }
@@ -206,7 +206,7 @@
   font-family: 'NexaLight' !important;
   font-size: 16px !important;
   
-  @include desktop{
+  @include tableBp{
     font-size: 21px !important;
     width: 100px !important;
   }
@@ -223,7 +223,7 @@
 .ordersTable__statusDropdown{
   padding: 0 !important;
 
-  @include desktop{
+  @include tableBp{
     padding: 16px !important;
   }
 
@@ -231,7 +231,7 @@
     line-height: 40px !important;
     padding: 18.5px 20px !important;
 
-    @include desktop{
+    @include tableBp{
       font-size: 17.5px !important;
       // padding: 26.25px 33.25px !important;
     }
@@ -246,7 +246,7 @@
     border-radius: 20px;
     background-color: white;
 
-    @include desktop{
+    @include tableBp{
       margin: 40px 65px;
       padding: 20px 65px;
     }
@@ -256,7 +256,7 @@
       font-size: 21px;
       color: $primary;
 
-      @include desktop{
+      @include tableBp{
         font-size: 32px;
         margin-bottom: 40px;
       }
@@ -269,7 +269,7 @@
   &__orderNoHeader{
     color: $primaryVariant1 !important;
 
-    @include desktop{
+    @include tableBp{
       width: 189px !important;
     }
   }
@@ -277,7 +277,7 @@
   &__productHeader{
     color: $primaryVariant1 !important;
 
-    @include desktop{
+    @include tableBp{
       width: 502px !important;
     }
   }
@@ -285,7 +285,7 @@
   &__quantityHeader{
     color: $primaryVariant1 !important;
 
-    @include desktop{
+    @include tableBp{
       width: 158px !important;
     }
   }
@@ -293,7 +293,7 @@
   &__statusHeader{
     color: $primaryVariant1 !important;
 
-    @include desktop{
+    @include tableBp{
       width: 241px;
     }
   }
