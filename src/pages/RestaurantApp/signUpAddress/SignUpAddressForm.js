@@ -35,45 +35,49 @@ let city = {
   4: 'Burnaby'
 
 }
-  // const validate = (fieldValues = values) => {
-  //   let temp = { ...errors };
-  //   if ("address" in fieldValues)
-  //     temp.address = fieldValues.address ? "" : "This field is required.";
-  //   if ("postcode" in fieldValues)
-  //     temp.postcode = fieldValues.postcode ? "" : "This field is required.";
-  //   if ("provinceNameId" in fieldValues)
-  //     temp.provinceNameId =
-  //       fieldValues.provinceNameId.length !== 0 ? "" : "This field is required.";
-  //   if ("cityNameId" in fieldValues)
-  //     temp.cityNameId =
-  //       fieldValues.cityNameId.length !== 0 ? "" : "This field is required.";
+  const validate = (fieldValues = values) => {
+    let temp = { ...errors };
+    if ("address" in fieldValues) {
+      temp.address =
+        fieldValues.address.length > 3 ? "" : "Minimum 4 Characters Required";
+    }
+    if ("postcode" in fieldValues) {
+      temp.postcode =
+        fieldValues.postcode.length > 5 ? "" : "Minimum 6 Characters Required";
+    }
+    if ("provinceNameId" in fieldValues){
+      temp.provinceNameId =
+      fieldValues.provinceNameId.length !== 0 ? "" : "This field is required.";
+    } 
+    if ("cityNameId" in fieldValues){
+      temp.cityNameId =
+      fieldValues.cityNameId.length !== 0 ? "" : "This field is required.";
+    }
+    setErrors({
+      ...temp,
+    });
 
-  //   setErrors({
-  //     ...temp,
-  //   });
-
-  //   if (fieldValues === values) return Object.values(temp).every((x) => x === "");
-  // };
+    if (fieldValues === values) return Object.values(temp).every((x) => x === "");
+  };
 
   const {
     values,
-    // errors,
-    // setErrors,
+    errors,
+    setErrors,
     handleInputChange,
     resetForm,
   } = useForm(
     initialFValues
-    // , true, validate
+    , true, validate
   );
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (validate()){
-
     const jwt = getJwtToken();
     if (!jwt) {
       history.push("/signIn");
     }
+    if (validate()){
     const elements = {
       address: values.address,
       postcode: values.postcode,
@@ -85,7 +89,6 @@ let city = {
         headers: { 'Authorization': `${jwt}` },
       })
       .then((res) => {
-        // console.log(props);
         history.push("/welcome");
       })
       .catch((err) => {
@@ -93,7 +96,7 @@ let city = {
         history.push("/signIn");
       });
     resetForm();
-    // }
+    }
   };
 
   return (
@@ -110,7 +113,7 @@ let city = {
             inputlabelprops={{
               required: true,
             }}
-            // error={errors.provinceNameId}
+            error={errors.provinceNameId}
           />
           <Controls.SelectControl
             name="cityNameId"
@@ -121,7 +124,7 @@ let city = {
             inputlabelprops={{
               required: true,
             }}
-            // error={errors.cityNameId}
+            error={errors.cityNameId}
           />
         </div>
 
@@ -133,7 +136,7 @@ let city = {
           inputlabelprops={{
             required: true,
           }}
-          // error={errors.address}
+          error={errors.address}
         />
         <Controls.TextFieldControl
           label="Postal Code"
@@ -143,7 +146,7 @@ let city = {
           inputlabelprops={{
             required: true,
           }}
-          // error={errors.postcode}
+          error={errors.postcode}
         />
 
         <button type="submit">Done</button>

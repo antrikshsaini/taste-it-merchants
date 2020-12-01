@@ -14,38 +14,46 @@ const initialFValues = {
 export default function SignUpForm() {
   const history = useHistory();
 
-  // const validate = (fieldValues = values) => {
-  //   let temp = { ...errors };
-  //   if ("password" in fieldValues)
-  //     temp.address =
-  //       fieldValues.password.length > 7 ? "" : "Minimum 8 characters required";
-  //   if ("email" in fieldValues)
-  //     temp.email = /$^|.+@.+..+/.test(fieldValues.email)
-  //       ? ""
-  //       : "Email is not valid.";
+  const validate = (fieldValues = values) => {
+    let temp = { ...errors };
+    if ("password" in fieldValues) {
+      temp.password =
+        fieldValues.password.length > 7 ? "" : "Minimum 8 Characters Required";
+    }
+    if ("email" in fieldValues) {
+      temp.email = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(
+        fieldValues.email
+      )
+        ? ""
+        : "Email is not valid.";
+    }
+    if ("confirmPassword" in fieldValues) {
+      console.log(values.password)
+      temp.confirmPassword =
+        fieldValues.confirmPassword !== values.password ? "Password and confirm password does not match" : ""
+    }
+    setErrors({
+      ...temp,
+    });
 
-  //   setErrors({
-  //     ...temp,
-  //   });
-
-  //   if (fieldValues === values) return Object.values(temp).every((x) => x === "");
-  // };
+    if (fieldValues === values)
+      return Object.values(temp).every((x) => x === "");
+  };
 
   const {
     values,
-    // errors,
-    // setErrors,
+    errors,
+    setErrors,
     handleInputChange,
     resetForm,
   } = useForm(
     initialFValues
-    // , true, validate
+    , true, validate
   );
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (validate()) {
-    // provinceService.insertEmployee(values)
+    if (validate()) {
 
     axios
       .post(`${BASE_URL}/restaurants/`, {
@@ -53,15 +61,12 @@ export default function SignUpForm() {
         password: values.password,
       })
       .then((res) => {
-        // console.log(res.data.token);
         localStorage.setItem("jwt-token", res.data.token);
-        // console.log(props);
-
         history.push("/signUpAbout");
       });
       
     resetForm();
-    // }
+    }
   };
 
   return (
@@ -72,7 +77,7 @@ export default function SignUpForm() {
             label="Email"
             value={values.email}
             onChange={handleInputChange}
-            // error={errors.email}
+            error={errors.email}
             InputLabelProps={{
               required: true,
             }}
@@ -83,7 +88,7 @@ export default function SignUpForm() {
             type="password"
             value={values.password}
             onChange={handleInputChange}
-            // error={errors.password}
+            error={errors.password}
             InputLabelProps={{
               required: true,
             }}
@@ -94,7 +99,7 @@ export default function SignUpForm() {
             type="password"
             value={values.confirmPassword}
             onChange={handleInputChange}
-            // error={errors.password}
+            error={errors.confirmPassword}
             InputLabelProps={{
               required: true,
             }}
