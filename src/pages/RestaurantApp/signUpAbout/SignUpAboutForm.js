@@ -14,32 +14,37 @@ const initialFValues = {
 
 export default function SignUpAboutForm() {
   const history = useHistory();
-  // const validate = (fieldValues = values) => {
-  //   let temp = { ...errors };
-  //   if ("password" in fieldValues)
-  //     temp.address =
-  //       fieldValues.password.length > 7 ? "" : "Minimum 8 characters required";
-  //   if ("email" in fieldValues)
-  //     temp.email = /$^|.+@.+..+/.test(fieldValues.email)
-  //       ? ""
-  //       : "Email is not valid.";
+  const validate = (fieldValues = values) => {
+    let temp = { ...errors };
+    if ("restaurantName" in fieldValues) {
+      temp.restaurantName =
+        fieldValues.restaurantName.length > 3 ? "" : "Minimum 4 Characters Required";
+    }
+    if ("restaurantDescription" in fieldValues) {
+      temp.restaurantDescription =
+        fieldValues.restaurantDescription.length > 3 ? "" : "Minimum 4 Characters Required";
+    }
+    if ("phoneNumber" in fieldValues) {
+      temp.phoneNumber =
+        fieldValues.phoneNumber.length > 9 ? "" : "Minimum 10 Digits Required";
+    }
+   
+    setErrors({
+      ...temp,
+    });
 
-  //   setErrors({
-  //     ...temp,
-  //   });
-
-  //   if (fieldValues === values) return Object.values(temp).every((x) => x === "");
-  // };
-
+    if (fieldValues === values)
+      return Object.values(temp).every((x) => x === "");
+  };
   const {
     values,
-    // errors,
-    // setErrors,
+    errors,
+    setErrors,
     handleInputChange,
     resetForm,
   } = useForm(
     initialFValues
-    // , true, validate
+    , true, validate
   );
 
   const handleSubmit = (e) => {
@@ -48,9 +53,8 @@ export default function SignUpAboutForm() {
     if (!jwt) {
       history.push("/signIn");
     }
-    // if (validate()) {
-    // provinceService.insertEmployee(values)
-
+    if (validate()) {
+      
     axios
       .put(
         `${BASE_URL}/restaurants/`,
@@ -62,7 +66,6 @@ export default function SignUpAboutForm() {
         { headers: { 'Authorization': `${jwt}` } },
       )
       .then((res) => {
-        // console.log(props);
         history.push("/signUpAddress");
       })
       .catch((err) => {
@@ -71,7 +74,7 @@ export default function SignUpAboutForm() {
       });
       
     resetForm();
-    // }
+    }
   };
 
   return (
@@ -82,7 +85,7 @@ export default function SignUpAboutForm() {
             label="Restaurant Name"
             value={values.restaurantName}
             onChange={handleInputChange}
-            // error={errors.email}
+            error={errors.restaurantName}
             InputLabelProps={{
               required: true,
             }}
@@ -92,7 +95,7 @@ export default function SignUpAboutForm() {
             label="Phone Number"
             value={values.phoneNumber}
             onChange={handleInputChange}
-            // error={errors.email}
+            error={errors.phoneNumber}
             InputLabelProps={{
               required: true,
             }}
@@ -105,7 +108,7 @@ export default function SignUpAboutForm() {
             onChange={handleInputChange}
             multiline
             rows={4}
-            // error={errors.email}
+            error={errors.restaurantDescription}
             InputLabelProps={{
               required: true,
             }}
