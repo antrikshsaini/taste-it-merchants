@@ -8,7 +8,7 @@ import TextField  from "@material-ui/core/TextField"
 
 const RestaurantInfo = props =>{
 
-  const {rName, phoneNumber, password, description, address} = props
+  const {rName, phoneNumber, password, description, address, logOutHandler} = props
 
   const addressString = `${address.address}, ${address.cityDescription}, ${address.provinceDescription}  ${address.postcode}`
 
@@ -37,7 +37,7 @@ const RestaurantInfo = props =>{
         <Link to='/restaurant/accountEdit'>
           <button>Edit Account</button>
         </Link>
-        <button className="account__logOutButton" >Log Out</button>
+        <button className="account__logOutButton" onClick={logOutHandler}>Log Out</button>
       </div>
       
     </div>

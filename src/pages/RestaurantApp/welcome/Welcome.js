@@ -9,6 +9,7 @@ import HeroPicMobileWebP from "../../../assets/img/dishes/welcomeMobileView.png.
 import HeroPicDesktop from "../../../assets/img/dishes/welcome.png"
 import HeroPicDesktopWebP from "../../../assets/img/dishes/welcome.png.webp"
 import MediaQuery from 'react-responsive';
+import {BASE_URL} from "../../../config/config"
 
 
 class Welcome extends Component {
@@ -28,7 +29,7 @@ class Welcome extends Component {
     }
 
     axios
-      .get("http://localhost:5000/api/restaurants/", {
+      .get(`${BASE_URL}/restaurants/`, {
         headers: { Authorization: `${jwt}` },
       })
       .then((res) => {

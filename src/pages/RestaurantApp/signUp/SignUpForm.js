@@ -28,7 +28,6 @@ export default function SignUpForm() {
         : "Email is not valid.";
     }
     if ("confirmPassword" in fieldValues) {
-      console.log(values.password)
       temp.confirmPassword =
         fieldValues.confirmPassword !== values.password ? "Password and confirm password does not match" : ""
     }

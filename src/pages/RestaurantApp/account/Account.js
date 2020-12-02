@@ -10,7 +10,7 @@ import RestaurantInfoEditor from './components/RestaurantInfoEditor'
 // Other
 import { getJwtToken } from "../../../components/getJwt"
 import {BASE_URL} from "../../../config/config"
-
+import { withRouter } from 'react-router-dom';
 
 class Contact extends Component {
 
@@ -25,13 +25,12 @@ class Contact extends Component {
     address: '',
     postcode: ''
   }
-
+  
   componentDidMount() {
-
     const jwt = getJwtToken()
-    // if (!jwt) {
-    //   this.props.history.push("/signIn")
-    // }
+    if (!jwt) {
+      this.props.history.push("/signIn")
+    }
 
     axios
       .get(`${BASE_URL}/restaurants`, {headers: { Authorization: `${jwt}` }}
@@ -62,23 +61,21 @@ class Contact extends Component {
         })
       })
       .catch((err) => {
-        // localStorage.removeItem("jwt-token")
-        // this.props.history.push("/signIn")
+        localStorage.removeItem("jwt-token")
+        this.props.history.push("/signIn")
       })
   }
 
 
   // Update Restaurant Account Info
   saveInfo = (e) => {
-
+    e.preventDefault()
     const {rName, phoneNumber, password, description, province, city, address, postcode } = this.state
 
     const jwt = getJwtToken()
     if (!jwt) {
       this.props.history.push("/signIn")
     }
-
-    e.preventDefault()
 
     axios
       .put(`${BASE_URL}/restaurants`, {
@@ -106,6 +103,12 @@ class Contact extends Component {
         this.props.history.push("/signIn")
       })
   }
+// log out handler, delete token and send to signIN
+logOutHandler = (e) => {
+  e.preventDefault()
+  localStorage.removeItem("jwt-token")
+        this.props.history.push("/")
+}
 
 
   // Input Change Handlers
@@ -171,7 +174,7 @@ class Contact extends Component {
           
           <div>
             <Route path="/restaurant/account">
-              <RestaurantInfo rName={rName} phoneNumber={phoneNumber} password={password} description={description} address={addressSet}/>
+              <RestaurantInfo rName={rName} phoneNumber={phoneNumber} password={password} description={description} address={addressSet} logOutHandler={this.logOutHandler}/>
             </Route>
             <Route path="/restaurant/accountEdit">
               <RestaurantInfoEditor 
@@ -197,4 +200,4 @@ class Contact extends Component {
   }}
 
 
-export default Contact
+export default withRouter(Contact)
