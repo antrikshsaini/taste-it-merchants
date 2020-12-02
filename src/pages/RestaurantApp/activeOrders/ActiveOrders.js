@@ -58,6 +58,8 @@ class ActiveOrders extends Component {
           return item.orderStatusID === 1 || item.orderStatusID === 2 || item.orderStatusID === 3
         })
 
+        console.log(activeOrders)
+
         this.setState({
           orders: activeOrders,
           isLoading: false

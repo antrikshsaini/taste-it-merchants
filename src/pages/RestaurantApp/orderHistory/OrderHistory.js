@@ -61,7 +61,7 @@ class ActiveOrders extends Component {
         const completedOrders = res.data.filter((item) => {
           return item.orderStatusID === 4 || item.orderStatusID === 5
         })
-
+        console.log(completedOrders)
         this.setState({
           orders: completedOrders,
           isLoading: false
