@@ -1,8 +1,13 @@
 .site-home-main{
   margin: 0 auto;
 
+  a{
+    color: $primaryVariant1 !important;
+  }
+
   .subtitle{
     @extend %sub_headings;
+    margin: 15px 0;
   }
 
   &__hero{
@@ -61,9 +66,9 @@
         }
 
         @include heroImgBp {
-          font-size: 70px;
+          font-size: 80px;
           max-width: 524px;
-          line-height: 87.5px;
+          line-height: 1.3;
         }
       }
   
@@ -142,12 +147,12 @@
 
         @include tablet {
           width: 80%;
-          margin-top: 50px;
+          margin-top: 30px;
         }
 
         @include desktop {
           width: auto;
-          margin-top: 50px;
+          margin-top: 0px;
         }
       }
     }
@@ -227,6 +232,7 @@
 
       .section2-content1{
         max-width: 418.25px;
+        margin-bottom: 40px;
 
         @include tablet{
           max-width: 30%;
@@ -261,6 +267,7 @@
 
         .section2-content2{
           max-width: 745px;
+          margin: 15px 0;
 
           h1{
             font-size: 36px;
@@ -422,6 +429,8 @@
       }
   
       .section4-content2{
+        margin-top: 20px;
+
         @include tablet {
           display: flex;
           flex-direction: column;

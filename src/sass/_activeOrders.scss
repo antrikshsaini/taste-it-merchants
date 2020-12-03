@@ -109,11 +109,17 @@
     // 'You can deactivate your...'/'Please activate your...'
     p{
       text-align: center;
+      margin-bottom: 20px;
 
       @include desktop{
         text-align: left;
+        max-width: 465px;
         margin: 0 0 22px;
         line-height: 31px;
+      }
+
+      @include navigationBp{
+        max-width: none;
       }
     }
   }

@@ -126,7 +126,7 @@ function Row(props) {
                   <TableRow  style={{ display: 'flex', flexDirection: 'column'}}>
                     <TableCell className="ordersTable__detailTable-tHCell"><img src={CustomerIcon} alt="Customer"/><span>Customer's Name</span></TableCell>
                     <TableCell className="ordersTable__detailTable-tHCell"><img src={ReviewIcon} alt="Review"/><span>Review</span></TableCell>
-                    <TableCell className="ordersTable__detailTable-tHCell"><img src={FeedbackIcon} alt="Feedback"/><span>feedback</span></TableCell>
+                    <TableCell className="ordersTable__detailTable-tHCell"><img src={FeedbackIcon} alt="Feedback"/><span>Feedback</span></TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>

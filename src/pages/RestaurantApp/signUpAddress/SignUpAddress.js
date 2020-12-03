@@ -18,8 +18,7 @@ class SignUpAddress extends Component {
           <Container fixed className="signUp-address__main">
             <h1>You are just a few steps away.</h1>
             <p>
-              Your restaurant location will help us reach out to your target
-              customers better
+              Where is your restaurant located?
             </p>
             <SignUpAddressForm />
           </Container>

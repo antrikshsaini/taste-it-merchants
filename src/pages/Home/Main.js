@@ -33,7 +33,7 @@ class Main extends Component {
       <main className="site-home-main">
         <section className="home-section1">
           {/* Hero Section */}
-          <Parallax speed={-2}>
+          <Parallax speed={-1}>
             <picture>
               <source srcSet={BannerWebP} type="image/webp" />
               <img src={Banner} alt="Hamburger, Fries, Drink and Egg" className="site-home-main__hero"/>
@@ -42,7 +42,7 @@ class Main extends Component {
           
           <div className="hero">
             <div className="hero__textWrapper">
-              <h1>New Food Experiences Tailored To Your Taste</h1>
+              <h1>Exciting Food Tailored To Your Taste.</h1>
               <p>
                 Discover your next favourite food and expand your taste horizons
                 through mystery dishes, customized just for you.
@@ -159,7 +159,7 @@ class Main extends Component {
             <p>
               Taste It is brought to you by a team of 10 members from diverse backgrounds
               with different working experiences. We are passionate
-              about solving daily problems creating a positive impact on the
+              about solving daily problems by creating a positive impact on the
               community with the help of technology.
             </p>
           </div>
