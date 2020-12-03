@@ -6,6 +6,10 @@
   font-size: 10px;
   line-height: 18px;
 
+  @include tablet {
+    font-size: 18px;
+  }
+
   @include desktop {
     margin: 0 auto;
     padding: 129.5px 20px 50px;
@@ -69,8 +73,23 @@
       display: flex;
       justify-content: space-between;
 
+      @include tablet {
+        justify-content: flex-start;
+      }
+
       @include desktop {
         width: 525px;
+      }
+
+      ul{
+
+        @include tablet {
+          margin-right: 150px;
+        }
+
+        @include desktop {
+          margin-right: auto;
+        }
       }
     }
   }

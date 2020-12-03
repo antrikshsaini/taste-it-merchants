@@ -42,7 +42,7 @@ class Main extends Component {
           
           <div className="hero">
             <div className="hero__textWrapper">
-              <h1>Tailored for Your New Food Experiences.</h1>
+              <h1>New Food Experiences Tailored To Your Taste</h1>
               <p>
                 Discover your next favourite food and expand your taste horizons
                 through mystery dishes, customized just for you.
@@ -57,8 +57,7 @@ class Main extends Component {
               <p className="subtitle">How it works</p>
               <h1>Explore an exciting way to spice up your meals.</h1>
               <p>
-                You will be provided with a unique culinary experience so that you
-                can discover your next favourite food through mystery dishes.
+                Go on a culinary adventure to discover your next favourite food through our mystery dishes.
               </p>
             </div>
             
@@ -87,7 +86,7 @@ class Main extends Component {
                 </picture>
 
                 <div className="howItWorks__step-text">
-                  <p>Hit “Order Now” and we will do the rest.</p>
+                  <p>Hit “Order Now” and we will take care of the rest.</p>
                 </div>
               </div>
               <div className="howItWorks__step">
@@ -97,7 +96,7 @@ class Main extends Component {
                 </picture>
 
                 <div className="howItWorks__step-text">
-                  <p>Enjoy a surprising meal tailored just for you.</p>
+                  <p>Enjoy a yummy meal tailored to your taste.</p>
                 </div>
               </div>
             </div>
@@ -118,7 +117,7 @@ class Main extends Component {
             <div className="home-section2__description">
               <div className="section2-content2">
                 <p className="subtitle">Features</p>
-                <h1>Discover new ways to manage your restaurant online orders.</h1>
+                <h1>Discover new ways to manage your online restaurant orders.</h1>
               </div>
               <div className="section2-content3">
                 <div className="content3">
@@ -144,8 +143,8 @@ class Main extends Component {
                     </picture>
                   </div>
                   <div className="content3-text">
-                    <p className="subtitle">Update your order statuses</p>
-                    <p className="content3-description">Keep your customers informed when order statuses change.</p>
+                    <p className="subtitle">Update your order status</p>
+                    <p className="content3-description">Keep your customers informed with order status updates.</p>
                   </div>
                 </div>
               </div>
@@ -158,10 +157,10 @@ class Main extends Component {
           <div className="section3-content1">
             <h1>Meet The Team</h1>
             <p>
-              Taste It is brought to you by 10 members from diverse backgrounds
-              with different working experiences. As a team, we are passionate
+              Taste It is brought to you by a team of 10 members from diverse backgrounds
+              with different working experiences. We are passionate
               about solving daily problems creating a positive impact on the
-              community through technology.
+              community with the help of technology.
             </p>
           </div>
 
@@ -194,7 +193,7 @@ class Main extends Component {
                 role: "Project Manager",
                 imgUrl: require('../../assets/img/teamImg/Milad.jpg'),
                 imgWebPUrl: require('../../assets/img/teamImg/Milad.jpg.webp'),
-                linkedIn:"http://linkedin.com/in/milad-mokhtari/",
+                linkedIn:"https://linkedin.com/in/milad-mokhtari/",
               }}
             />
 
@@ -204,7 +203,7 @@ class Main extends Component {
                 role: "Full Stack Developer",
                 imgUrl: require('../../assets/img/teamImg/Antrix.jpg'),
                 imgWebPUrl: require('../../assets/img/teamImg/Antrix.jpg.webp'),
-                linkedIn:"linkedin.com/in/antriksh-saini-3286b3106/",
+                linkedIn:"https://www.linkedin.com/in/antriksh-saini-3286b3106/",
                 github:"https://github.com/antrikshsaini"
               }}
             />
@@ -226,8 +225,8 @@ class Main extends Component {
                 role: "Front End Developer",
                 imgUrl: require('../../assets/img/teamImg/Arjun.jpg'),
                 imgWebPUrl: require('../../assets/img/teamImg/Arjun.jpg.webp'),
-                linkedIn:"linkedin.com/in/arjun-dhingra-617749159/",
-                github:"github.com/arjund96"
+                linkedIn:"https://www.linkedin.com/in/arjun-dhingra-617749159/",
+                github:"https://github.com/arjund96"
               }}
             />
 
@@ -248,7 +247,7 @@ class Main extends Component {
                 role: "UI/UX Designer",
                 imgUrl: require('../../assets/img/teamImg/Harman.jpg'),
                 imgWebPUrl: require('../../assets/img/teamImg/Harman.jpg.webp'),
-                linkedIn:"linkedin.com/in/harman-jhita/",
+                linkedIn:"https://www.linkedin.com/in/harman-jhita/",
               }}
             />
 
@@ -258,7 +257,7 @@ class Main extends Component {
                 role: "UI/UX Designer",
                 imgUrl: require('../../assets/img/teamImg/Manpreet.jpg'),
                 imgWebPUrl: require('../../assets/img/teamImg/Manpreet.jpg.webp'),
-                linkedIn:"linkedin.com/in/manpreet-kaur7",
+                linkedIn:"https://www.linkedin.com/in/manpreet-kaur7",
                 behance:"https://www.behance.net/manpreetkaur24"
               }}
             />
@@ -269,7 +268,7 @@ class Main extends Component {
                 role: "UI/UX Designer",
                 imgUrl: require('../../assets/img/teamImg/Hiril.jpg'),
                 imgWebPUrl: require('../../assets/img/teamImg/Hiril.jpg.webp'),
-                linkedIn:"linkedin.com/in/hiril-kainth-3ba598171/",
+                linkedIn:"https://www.linkedin.com/in/hiril-kainth-3ba598171/",
               }}
             />
           </div>
@@ -285,10 +284,10 @@ class Main extends Component {
             <div className="section4-content2">
               <h1>Ready to see what we are working on?</h1>
               <p>
-                If you are curious to know all the details of our solution, please
+                If you are curious to know more about our solutions, please
                 feel free to take a look at our project proposal
               </p>
-              <button>Download Now</button>
+              <a href="https://drive.google.com/file/d/1couz50H6GlM9GlTLKE4Zx032h2m0bowI/view?usp=sharing"><button>Download Now</button></a>
             </div>
           </section>
         </div>

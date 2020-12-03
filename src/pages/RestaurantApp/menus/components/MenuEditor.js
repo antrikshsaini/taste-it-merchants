@@ -39,8 +39,8 @@ class MenuEditor extends Component{
     allergy: [
       { choiceDescription: 'No Allergens', checked: false, pictureURL:'https://i.ibb.co/hDBYYzk/good-heart.png'},
       { choiceDescription: 'Milk', checked: false, pictureURL:'https://i.ibb.co/3c2zNHw/milk.png'},
-      { choiceDescription: 'Crustacean shellfish', checked: false, pictureURL:'https://i.ibb.co/d4jvWFm/crustacean-shellfish.png'},
-      { choiceDescription: 'Tree nuts', checked: false, pictureURL:'https://i.ibb.co/VDH0bMt/tree-nuts.png'},
+      { choiceDescription: 'Shellfish', checked: false, pictureURL:'https://i.ibb.co/d4jvWFm/crustacean-shellfish.png'},
+      { choiceDescription: 'Tree Nuts', checked: false, pictureURL:'https://i.ibb.co/VDH0bMt/tree-nuts.png'},
       { choiceDescription: 'Fish', checked: false, pictureURL:'https://i.ibb.co/5rMtbNN/fish.png'},
       { choiceDescription: 'Eggs', checked: false, pictureURL:'https://i.ibb.co/sHC1Hbk/eggs.png'},
       { choiceDescription: 'Soybean', checked: false, pictureURL:'https://i.ibb.co/X3qmqnv/soybeans.png'},

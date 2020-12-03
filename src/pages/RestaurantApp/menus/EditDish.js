@@ -13,7 +13,7 @@ const EditDish = props =>{
   return(
     <div className="editDish">
       <div className="editDish__titleWrap">
-        <p>Hi {rName}, let's customize your menu now</p>
+        <p>Hi, {rName}. Let's customize your menu now</p>
         <h1>Edit Dish</h1>
       </div>
 

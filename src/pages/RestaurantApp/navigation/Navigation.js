@@ -73,11 +73,11 @@ export default function Navigation() {
   return (
       <div className={classes.root} id="restaurantApp_wrap">
 
-      <MediaQuery maxDeviceWidth={1679}>
+      <MediaQuery maxDeviceWidth={1349}>
         <MobileMenu handleChange={handleChange} value={value}/>
       </MediaQuery>
 
-      <MediaQuery minDeviceWidth={1680}>
+      <MediaQuery minDeviceWidth={1350}>
         <div className="navigation__wrapper">
           <Link to="/"><img src={SiteLogo} alt="tasteIt Logo" className="navigation__logo"/></Link>
           {/* Navigation Menu */}
@@ -89,27 +89,27 @@ export default function Navigation() {
             indicatorColor="none"
           >
             <Tab 
-              label="Active Orders" 
+              label={<span className="tabName">Active Orders</span>} 
               icon={<Icon name="activeOrders" />} 
               to="/restaurant/activeOrders" 
               component={Link} />
             <Tab 
-              label="Menu" 
+              label={<span className="tabName">Menu</span>} 
               icon={ <Icon name="menu" />} 
               to="/restaurant/menus" 
               component={Link} />
             <Tab 
-              label="Order History" 
+              label={<span className="tabName">Order History</span>} 
               icon={<Icon name="orderHistory" />} 
               to="/restaurant/orderHistory" 
               component={Link} /> 
             <Tab 
-              label="Account" 
+              label={<span className="tabName">Account</span>} 
               icon={<Icon name="account" />} 
               to="/restaurant/account" 
               component={Link} />
             <Tab 
-              label="Support" 
+              label={<span className="tabName">Support</span>}
               icon={<Icon name="support" />} 
               to="/restaurant/contact" 
               component={Link} />

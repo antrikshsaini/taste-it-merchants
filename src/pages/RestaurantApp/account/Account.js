@@ -165,7 +165,7 @@ class Contact extends Component {
     return (
         <div className="account">
           <div className="account__title">
-            <p>Hi {rName}, keep your restaurant info updated.</p>
+            <p>Hi, {rName}. Keep your restaurant info updated.</p>
             <h1>Your Account</h1>
           </div>
           

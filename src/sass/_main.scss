@@ -9,11 +9,15 @@
     max-width: 100%;
 
     @include desktop {
-      width: 50vw;
-      min-width: 800px;
+      width: 53%;
       position: absolute;
       right: 0;
       z-index: -1;
+    }
+
+    @include heroImgBp {
+      width: 50vw;
+      min-width: 800px;
     }
   }
 
@@ -30,6 +34,10 @@
 
     @include desktop {
       flex-direction: row;
+      height: 624px;
+    }
+
+    @include heroImgBp{
       height: 824px;
     }
 
@@ -47,8 +55,14 @@
         @include desktop {
           padding: 0;
           margin: 0;
-          max-width: 574px;
+          max-width: 450px;
+          font-size: 60px;
+          line-height: 67.5px;
+        }
+
+        @include heroImgBp {
           font-size: 70px;
+          max-width: 524px;
           line-height: 87.5px;
         }
       }
@@ -84,8 +98,8 @@
     margin: 0 auto 115px;
     padding: 0 17.5px;
 
-    @include desktop {
-      margin: 0 auto;
+    @include tablet {
+      margin: 0 auto 100px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
@@ -95,14 +109,14 @@
         margin: 43.75px auto;
         text-align: left;
 
-        @include desktop {
+        @include tablet {
           margin: 0;
           grid-column: 2/3;
           grid-row: 1/2;
         }
 
         h1{
-          @include desktop {
+          @include tablet {
             margin: 0;
           }
         }
@@ -115,7 +129,7 @@
     picture{
       max-width: 100%;
       
-      @include desktop {
+      @include tablet {
         max-width: 525px;
         margin: 10px;
         grid-column: 1/2;
@@ -126,8 +140,14 @@
       .pancakePic{
         margin-top: 50px;
 
+        @include tablet {
+          width: 80%;
+          margin-top: 50px;
+        }
+
         @include desktop {
-          margin-top: 60px;
+          width: auto;
+          margin-top: 50px;
         }
       }
     }
@@ -136,14 +156,14 @@
       margin-bottom: 100px;
       margin: 50px 0;
 
-      @include desktop {
+      @include tablet {
         grid-column: 2/3;
         grid-row: 2/3;
         margin: 0
       }
   
       p{
-        @include desktop {
+        @include tablet {
           margin: 0
         }
       }
@@ -156,7 +176,7 @@
       text-align: left;
       margin: 20px 0;
 
-      @include desktop {
+      @include tablet {
         justify-content: flex-start;
         height: 58.7px;
       }
@@ -165,7 +185,7 @@
         width: 35px;
         margin: 0 60px 0 0;
 
-        @include desktop {
+        @include tablet {
           margin-right: 26.25px;
         }
       }
@@ -189,7 +209,7 @@
     width: 100%;
     margin: 0 auto;
 
-    @include desktop {
+    @include tablet {
       padding: 144px 0;
     }
 
@@ -199,7 +219,7 @@
       max-width: $maxWidth;
       
 
-      @include desktop {
+      @include tablet {
         display: flex;
         // justify-content: space-between;
         margin: 0 auto;
@@ -208,9 +228,20 @@
       .section2-content1{
         max-width: 418.25px;
 
+        @include tablet{
+          max-width: 30%;
+          margin-left: 30px;
+          display: flex;
+
+        }
+
+        @include desktop{
+          max-width: 418.25px;
+          margin-left: auto;
+        }
+
         picture{
           margin: 50px auto;
-          max-width: 418px;
 
           @include desktop {
             margin: 0;
@@ -220,7 +251,7 @@
 
       &__description{
         
-        @include desktop {
+        @include tablet{
           flex-grow: 2;
           order: -1;
           display: flex;
@@ -245,7 +276,7 @@
             flex-direction: column;
             margin-bottom: 30px;
 
-          @include desktop {
+          @include tablet {
             flex-direction: row;
             margin: 0;
           }
@@ -304,7 +335,7 @@
     max-width: $maxWidth;
     margin: auto;
 
-    @include desktop {
+    @include tablet{
       margin: 138.3px auto 168px auto;
     }
 
@@ -336,14 +367,18 @@
 
     // Member Cards List
     .section3-content2{
-      @include tablet {
+
+      @include lMobile {
         display: grid;
         grid-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include tablet {
         grid-template-columns: 1fr 1fr 1fr;
       }
 
       @include desktop {
-        display: grid;
         grid-gap: 56px 73px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
@@ -372,9 +407,17 @@
         max-width: 100%;
 
         @include tablet{
+          // max-width: 554px;
+          // margin: 0 110px 0 0;
+          width: 53%;
+          padding: 0 110px 0 0;
+        }
+
+        @include desktop{
           max-width: 554px;
+          width: auto;
+          padding: 0;
           margin: 0 110px 0 0;
-          // justify-content: space-between;
         }
       }
   
@@ -383,15 +426,25 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
+          width: 47%;
+        }
+
+        @include desktop {
           min-width: 364px;
+          width: auto;
         }
 
         // "Ready to see what we are working on?"
         h1{
           font-size: 31px;
+
           @include tablet {
-            font-size: 52.5px;
+            font-size: 40px;
             margin-bottom: 0;
+          }
+
+          @include desktop {
+            font-size: 52.5px;
           }
         }
 

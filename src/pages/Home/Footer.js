@@ -26,7 +26,7 @@ class Footer extends Component {
                 <h3>Design Assets</h3>
 
               <li>Marketing Materials</li>
-              <li>Promotional Videos</li>
+              <li><a href="https://drive.google.com/file/d/1xyw8zCXyBQw8WLB6mlqE-3s5VQuf4VbM/view?usp=sharing">Promotional Videos</a></li>
               <li>Project Proposal</li>
             </ul>
 

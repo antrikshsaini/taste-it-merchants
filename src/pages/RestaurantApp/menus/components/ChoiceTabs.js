@@ -25,7 +25,7 @@ const ChoiceTabs = props =>{
           <Tab label="Cuisine Type" style={{ fontFamily: 'NexaBold', fontSize: '20px', textTransform: 'none'}} />
           <Tab label="Allergy"  style={{ fontFamily: 'NexaBold', fontSize: '20px', textTransform: 'none'}}  />
           <Tab label="Diet Type"  style={{ fontFamily: 'NexaBold', fontSize: '20px', textTransform: 'none'}}  />
-          <Tab label="Spicy Level"  style={{ fontFamily: 'NexaBold', fontSize: '20px', textTransform: 'none'}}  />
+          <Tab label="Spiciness"  style={{ fontFamily: 'NexaBold', fontSize: '20px', textTransform: 'none'}}  />
         </Tabs>
       
       <TabPanel index={0} value={value} choices ={cuisineType} handleChange={handleCusineTypeChange}/>

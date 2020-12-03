@@ -32,7 +32,7 @@ class SignUp extends Component {
           <div className="signUp__container">
             <h1>Become a partner <br/>with Taste It.</h1>
             <p>
-              Expand your reach, grow your network and give a delightful
+              Expand your reach, grow your patronage and give a delightful
               experience to your customers.
             </p>
             <SignUpForm />
