@@ -167,7 +167,7 @@ const MenuDetail = props =>{
   return(
     <div className="menuDetail">
       <div className="menuDetail__titleWrap">
-        <p>Hi {rName}, let's customize your menu now</p>
+        <p>Hi, {rName}. Let's customize your menu now</p>
         <h2>Dish Details</h2>
       </div>
       

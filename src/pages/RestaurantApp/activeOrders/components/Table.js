@@ -113,7 +113,7 @@ function Row(props) {
             style={{width: '300px', borderRadius: '20px'}}
             IconComponent = {ExpandMoreIcon}
           >
-            <MenuItem key='0' value='1'>Waiting to be confirmed</MenuItem>
+            <MenuItem key='0' value='1'>Waiting To Be Confirmed</MenuItem>
             <MenuItem key='1' value='2'>Being Prepared</MenuItem>
             <MenuItem key='2' value='3'>Being Delivered</MenuItem>
             <MenuItem key='3' value='4'>Delivered</MenuItem>
@@ -129,7 +129,7 @@ function Row(props) {
               <Table size="small" aria-label="purchases" style={{ display: 'flex', flexDirection: 'row'}}>
                 <TableHead className="ordersTable__detailTable-tabelHeader" >
                   <TableRow style={{ display: 'flex', flexDirection: 'column'}}>
-                    <TableCell className="ordersTable__detailTable-tHCell"><img src={CustomerIcon} alt="Customer"/><span>Customer's name</span></TableCell>
+                    <TableCell className="ordersTable__detailTable-tHCell"><img src={CustomerIcon} alt="Customer"/><span>Customer's Name</span></TableCell>
                     <TableCell className="ordersTable__detailTable-tHCell"><img src={AddressIcon} alt="Address"/><span>Address</span></TableCell>
                     <TableCell className="ordersTable__detailTable-tHCell"><img src={PhoneIcon} alt="Phone"/><span>Phone Number</span></TableCell>
                     <TableCell className="ordersTable__detailTable-tHCell"><img src={InstructionIcon} alt="Instruction"/><span>Instructions</span></TableCell>

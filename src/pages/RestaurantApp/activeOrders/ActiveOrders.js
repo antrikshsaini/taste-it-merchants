@@ -129,7 +129,7 @@ class ActiveOrders extends Component {
     return (
       <div className="activeOrders">
         <div className="activeOrders__titleWrap">
-          <p>Hi {rName}, welcome back!</p>
+          <p>Hi, {rName}. Welcome back!</p>
           <h1>Active Orders</h1>
         </div>
         

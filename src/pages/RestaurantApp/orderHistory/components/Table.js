@@ -124,7 +124,7 @@ function Row(props) {
               <Table size="small" aria-label="purchases"  style={{ display: 'flex', flexDirection: 'row'}}>
                 <TableHead  className="ordersTable__detailTable-tabelHeader">
                   <TableRow  style={{ display: 'flex', flexDirection: 'column'}}>
-                    <TableCell className="ordersTable__detailTable-tHCell"><img src={CustomerIcon} alt="Customer"/><span>Customer's name</span></TableCell>
+                    <TableCell className="ordersTable__detailTable-tHCell"><img src={CustomerIcon} alt="Customer"/><span>Customer's Name</span></TableCell>
                     <TableCell className="ordersTable__detailTable-tHCell"><img src={ReviewIcon} alt="Review"/><span>Review</span></TableCell>
                     <TableCell className="ordersTable__detailTable-tHCell"><img src={FeedbackIcon} alt="Feedback"/><span>feedback</span></TableCell>
                   </TableRow>

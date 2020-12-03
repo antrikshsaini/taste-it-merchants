@@ -31,6 +31,10 @@
   border-radius: 20px;
   padding: 0 !important;
   height: 72.6px;
+
+  .MuiFormControlLabel-label{
+    padding-top: 7px;
+  }
 }
 
 .MuiFormControlLabel-root{
@@ -60,7 +64,7 @@
 }
 
 .choiceIcon{
-    width: 20px;
+    width: 25px;
     max-height: 30px;
     margin-left: 40px;
 }
@@ -78,7 +82,7 @@
   color: $primary;
 
   .MuiTab-wrapper{
-    border-bottom: 6px solid $primary;
+    border-bottom: 4px solid $primary;
   }
 }
 

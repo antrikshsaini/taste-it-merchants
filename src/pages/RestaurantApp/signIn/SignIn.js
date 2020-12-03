@@ -40,7 +40,7 @@ class SignIn extends Component {
 
             <SignInForm />
 
-            <span className="signIn__cta">Not in partner with Taste It? <Link to="/signUp" ><span>Sign up now</span></Link></span>
+            <span className="signIn__cta">Not a partner with Taste It yet? <Link to="/signUp" ><span>Sign up now</span></Link></span>
           </div>
         </div>
       </div>

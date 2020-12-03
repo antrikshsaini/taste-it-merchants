@@ -42,35 +42,35 @@ const Toolbar = props =>{
                         indicatorColor="none"
                     >
                         <Tab 
-                            label="Active Orders" 
+                            label={<span>Active Orders</span>}
                             icon={<Icon name="activeOrders" />} 
                             to="/restaurant/activeOrders" 
                             component={Link} 
                             onClick={() => props.setMenu(false)} />
 
                         <Tab 
-                            label="Menu" 
+                            label={<span>Menu</span>} 
                             icon={ <Icon name="menu" />} 
                             to="/restaurant/menus" 
                             component={Link} 
                             onClick={() => props.setMenu(false)} />
 
                         <Tab 
-                            label="Order History" 
+                            label={<span>Order History</span>} 
                             icon={<Icon name="orderHistory" />} 
                             to="/restaurant/orderHistory" 
                             component={Link} 
                             onClick={() => props.setMenu(false)} /> 
 
                         <Tab 
-                            label="Account" 
+                            label={<span>Account</span>} 
                             icon={<Icon name="account" />} 
                             to="/restaurant/account" 
                             component={Link} 
                             onClick={() => props.setMenu(false)} />
 
                         <Tab 
-                            label="Support" 
+                            label={<span>Support</span>} 
                             icon={<Icon name="support" />} 
                             to="/restaurant/contact" 
                             component={Link} 

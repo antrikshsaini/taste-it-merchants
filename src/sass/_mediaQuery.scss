@@ -3,11 +3,31 @@
 //          display: grid;
 //        }
 
+@mixin lMobile{
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
 @mixin tablet{
   @media (min-width: 806px) {
     @content;
   }
 }
+
+@mixin desktop{
+  @media (min-width: 1150px){
+    @content;
+  }
+}
+
+
+@mixin heroImgBp{
+  @media (min-width: 1520px) {
+    @content;
+  }
+}
+
 
 @mixin tableBp{
   @media (min-width: 1200px) {
@@ -15,8 +35,15 @@
   }
 }
 
-@mixin desktop{
-  @media (min-width: 1150px){
+
+@mixin navigationBp{
+  @media (min-width: 1655px){
+    @content;
+  }
+}
+
+@mixin dashboardBp{
+  @media (min-width: 1350px){
     @content;
   }
 }

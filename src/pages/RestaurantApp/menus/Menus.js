@@ -141,7 +141,7 @@ class Menus extends Component {
       <div className="menus">
       {/* <Route exact path="/restaurant/menus"> */}
         <div className="menus__titleWrap">
-          <p>Hi {rName}, let's customize your menu now</p>
+          <p>Hi, {rName}. Let's customize your menu now</p>
           <h1>Menu</h1>
         </div>
 
